@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% block title %}{{ super() }} - Shoes Page{% endblock%} {% block content %}
+<div>
+    <h1>Shoes Page</h1>
+
+    <div class="products-cards">
+        {% for item in content['items'] %}
+        <div class="card">
+            <img class="card-image" src="{{ url_for('static', filename=item.img) }} " alt="image " />
+            <div class="products-cards__text">
+                <h3>{{ item.name }}</h3>
+                <p>{{ item.desc }}</p>
+                <p>{{ item.price }} rub</p>
+                <a href="#">Buy</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+{% endblock %}

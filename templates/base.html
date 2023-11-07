@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/styles/style.css">
+    <title>{% block title %}Shop{% endblock %}</title>
+</head>
+
+<body>
+    <header>
+        <a class="header-link" href="/">Main</a>
+        <a class="header-link" href="#">About us</a>
+        <a class="header-link" href="#">Services</a>
+        <a class="header-link" href="#">Features</a>
+        <a class="header-link" href="#">Team</a>
+    </header>
+
+    <section class="nav_menu">
+        <nav>
+            <ul class="nav_menu-ul">
+                Menu:
+                <li><a class="nav_menu-ul-li-a" href="/clothes/">Clothes</a></li>
+                <li><a class="nav_menu-ul-li-a" href="/jackets/">Jackets</a></li>
+                <li><a class="nav_menu-ul-li-a" href="/shoes/">Shoes</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    {% block content %}{% endblock %}
+
+    <footer>
+        <p class="footer-p">©️ clothing company</p>
+        <p class="footer-p"> Контакты: тел +79998886644, ул. Московская дом 12а </p>
+    </footer>
+
+</body>
+
+</html>
